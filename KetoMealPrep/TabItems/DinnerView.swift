@@ -35,7 +35,10 @@ struct DinnerView: View {
     
     let samplePhoto2 = "https://azestybite.com/wp-content/uploads/2015/03/Pistachio-Crusted-Salmon-2.jpg"
     
-    
+    @ObservedObject var isFavorited: FavoritedStatus
+    @ObservedObject var isDinner1Favorited: FavoriteDinnerStatus1
+    @ObservedObject var isDinner2Favorited: FavoriteDinnerStatus2
+    @ObservedObject var isDinner3Favorited: FavoriteDinnerStatus3
     var body: some View {
         
        
@@ -60,10 +63,10 @@ struct DinnerView: View {
                     
                     VStack {
               
-                DinnerPreview1()
-                DinnerPreview2()
-                DinnerPreview3()
-                DinnerPreview4()
+                DinnerPreview1(isDinner1Favorited: isDinner1Favorited)
+                DinnerPreview2(isDinner2Favorited: isDinner2Favorited)
+                DinnerPreview3(isDinner3Favorited: isDinner3Favorited)
+                DinnerPreview4(isFavorited: isFavorited)
                    
                     }
                 
@@ -77,6 +80,6 @@ struct DinnerView: View {
 
 struct DinnerView_Previews: PreviewProvider {
     static var previews: some View {
-        DinnerView()
+        DinnerView(isFavorited: FavoritedStatus.init(), isDinner1Favorited: FavoriteDinnerStatus1.init(), isDinner2Favorited: FavoriteDinnerStatus2.init(), isDinner3Favorited: FavoriteDinnerStatus3.init())
     }
 }

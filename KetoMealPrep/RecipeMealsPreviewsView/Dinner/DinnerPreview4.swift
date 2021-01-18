@@ -27,108 +27,30 @@ struct DinnerPreview4: View {
     
     let samplePhoto2 = "https://azestybite.com/wp-content/uploads/2015/03/Pistachio-Crusted-Salmon-2.jpg"
     
+    @State private var doubleTapAnimaitonShow28 = false
+    @State private var doubleTapAnimaitonShow30 = false
     
+    @State private var circleColorChanged28 = false
+    @State private var heartColorChanged28 = false
+    @State private var heartSizeChanged28 = false
+    
+    @State private var circleColorChanged30 = false
+    @State private var heartColorChanged30 = false
+    @State private var heartSizeChanged30 = false
+    
+ 
+   
+    @ObservedObject var isFavorited: FavoritedStatus
     
     var body: some View {
             
     
         VStack(alignment: .leading, spacing: 0) {
-            ZStack {
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-                HStack {
-
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[28].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-
-
-
-
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[28].title ?? "Fake Source")")
-                            .bold()
-
-
-                        Text("Ready In \(KetoJSONDecoded?.results[28].readyInMinutes?.formatNumber()  ?? "") minutes")
-
-                        Text("Serving Size: \(KetoJSONDecoded?.results[28].servings?.formatNumber()  ?? "")")
-
-
-
-                    }
-
-
-       Spacer()
-            NavigationLink(
-            destination: RecipeDetailView28(),
-            label: {
-
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-
-                })
-                }
-
-
-            }.padding(.bottom)
-
-            ZStack {
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-                HStack {
-
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[30].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-
-
-
-
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[30].title ?? "Fake Source")")
-                            .bold()
-
-
-                        Text("Ready In \(KetoJSONDecoded?.results[30].readyInMinutes?.formatNumber()  ?? "") minutes")
-
-                        Text("Serving Size: \(KetoJSONDecoded?.results[30].servings?.formatNumber()  ?? "")")
-
-
-
-                    }
-
-
-       Spacer()
-            NavigationLink(
-            destination: RecipeDetailView30(),
-            label: {
-
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-
-                })
-                }
-
-
-            }.padding(.bottom)
-
-           
             
+            RecipePreviewCell28(isFavorited: isFavorited)
+            RecipePreviewCell30(isFavorited: isFavorited)
+ 
+
             
 
         }
@@ -141,6 +63,6 @@ struct DinnerPreview4: View {
 
 struct DinnerPreview4_Previews: PreviewProvider {
     static var previews: some View {
-        DinnerPreview4()
+        DinnerPreview4(isFavorited: FavoritedStatus.init())
     }
 }

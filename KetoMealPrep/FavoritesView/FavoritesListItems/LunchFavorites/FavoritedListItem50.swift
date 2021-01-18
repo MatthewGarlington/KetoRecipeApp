@@ -1,0 +1,27 @@
+//
+//  FavoritedListItem50.swift
+//  KetoMealPrep
+//
+//  Created by Matthew Garlington on 1/17/21.
+//
+
+import SwiftUI
+
+struct FavoritedListItem50: View {
+    @ObservedObject var isLunch2Favorited: FavoriteLunchStatus2
+    
+    var body: some View {
+        
+            
+            if self.isLunch2Favorited.isFavorited50 == true {
+                
+                RecipePreviewCell50(isLunch2Favorited: isLunch2Favorited)
+                
+            }
+            
+            else {
+                
+          
+            }
+        }
+    }

@@ -69,7 +69,7 @@ struct RecipeDetailView79: View {
                     Spacer()
                         .frame(width: 420, height: 750)
                         .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                        .cornerRadius(15)
+                 
                     
                     
                     
@@ -199,14 +199,14 @@ struct RecipeDetailView79: View {
                     
                 }
                 
-                Spacer()
+                
                 
                 ZStack(alignment: .topLeading) {
                     
                     Spacer()
                         .frame(width: 420, height: 250)
                         .background(Color.init(#colorLiteral(red: 0.5910183787, green: 0.8180559874, blue: 0.7196184993, alpha: 1)))
-                        .cornerRadius(15)
+                    
                     
                     VStack(alignment: .leading, spacing: 20) {
                         
@@ -254,14 +254,14 @@ struct RecipeDetailView79: View {
                         
                     }
                 }
-                Spacer()
+        
                 
                 ZStack(alignment: .topLeading) {
                     
                     Spacer()
                         .frame(width: 420, height: 950)
                         .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                        .cornerRadius(15)
+           
                     
                     VStack(alignment: .leading, spacing: 10) {
                         

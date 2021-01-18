@@ -31,9 +31,17 @@ struct BreakfastView: View {
     
     
     
+    
     let samplePhoto = "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=700%2C636"
     
     let samplePhoto2 = "https://azestybite.com/wp-content/uploads/2015/03/Pistachio-Crusted-Salmon-2.jpg"
+    
+    @ObservedObject var isFavorited: FavoritedStatus
+    @ObservedObject var isBreakFast1Favorited: FavoritedBreakfastStatus1
+    @ObservedObject var isBreakFast2Favorited: FavoritedBreakfastStatus2
+    
+    @State private var searchText = ""
+    
     
     
     
@@ -42,8 +50,11 @@ struct BreakfastView: View {
         // Breakfast Preview View On Homepage
 
             ScrollView {
+                
                 VStack {
+            
                     
+                   
                     VStack {
                         ZStack {
                             Spacer()
@@ -61,9 +72,11 @@ struct BreakfastView: View {
                     .padding(.bottom, 20)
                     
                     VStack {
-                BreakfastPreview1()
+                    
+                        
+                        BreakfastPreview1(isBreakFast1Favorited: isBreakFast1Favorited)
           
-                BreakfastPreview2()
+                        BreakfastPreview2(isBreakFast2Favorited: isBreakFast2Favorited)
                     }
                 }
     }.padding()
@@ -72,10 +85,11 @@ struct BreakfastView: View {
 }
     
 }
+
                    
 
 struct BreakfastView_Previews: PreviewProvider {
     static var previews: some View {
-        BreakfastView()
+        BreakfastView(isFavorited: FavoritedStatus.init(), isBreakFast1Favorited: FavoritedBreakfastStatus1.init(), isBreakFast2Favorited: FavoritedBreakfastStatus2.init())
     }
 }

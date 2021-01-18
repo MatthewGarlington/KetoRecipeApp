@@ -29,6 +29,8 @@ struct SaladView: View {
     
     let samplePhoto2 = "https://azestybite.com/wp-content/uploads/2015/03/Pistachio-Crusted-Salmon-2.jpg"
     
+    @ObservedObject var isFavorited: FavoritedStatus
+    
     
     var body: some View {
         
@@ -55,8 +57,8 @@ struct SaladView: View {
                     
                     VStack {
               
-                SaladPreviewView1()
-                SaladPreviewView2()
+                SaladPreviewView1(isFavorited: isFavorited)
+                SaladPreviewView2(isFavorited: isFavorited)
 
                     }
         
@@ -80,7 +82,7 @@ struct SaladView: View {
                     
                     VStack {
               
-                SoupPreviewView1()
+                SoupPreviewView1(isFavorited: isFavorited)
 
                     }
     }.padding()
@@ -92,6 +94,6 @@ struct SaladView: View {
 
 struct SaladView_Previews: PreviewProvider {
     static var previews: some View {
-        SaladView()
+        SaladView(isFavorited: FavoritedStatus.init())
     }
 }

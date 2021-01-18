@@ -28,6 +28,56 @@ struct BreakfastPreview1: View {
     
     let samplePhoto2 = "https://azestybite.com/wp-content/uploads/2015/03/Pistachio-Crusted-Salmon-2.jpg"
     
+    @State private var didTap: Bool = false
+    @State private var showNextPage97: Bool = false
+    @State private var showNextPage95: Bool = false
+    @State private var showNextPage68: Bool = false
+    @State private var showNextPage63: Bool = false
+    @State private var showNextPage59: Bool = false
+    @State private var showNextPage53: Bool = false
+
+    
+    @State private var doubleTapAnimaitonShow97 = false
+    @State private var doubleTapAnimaitonShow95 = false
+    @State private var doubleTapAnimaitonShow68 = false
+    @State private var doubleTapAnimaitonShow63 = false
+    @State private var doubleTapAnimaitonShow59 = false
+    @State private var doubleTapAnimaitonShow53 = false
+    
+    @State private var circleColorChanged97 = false
+    @State private var heartColorChanged97 = false
+    @State private var heartSizeChanged97 = false
+    
+    @State private var circleColorChanged95 = false
+    @State private var heartColorChanged95 = false
+    @State private var heartSizeChanged95 = false
+    
+    @State private var circleColorChanged68 = false
+    @State private var heartColorChanged68 = false
+    @State private var heartSizeChanged68 = false
+    
+    @State private var circleColorChanged63 = false
+    @State private var heartColorChanged63 = false
+    @State private var heartSizeChanged63 = false
+    
+    @State private var circleColorChanged59 = false
+    @State private var heartColorChanged59 = false
+    @State private var heartSizeChanged59 = false
+    
+    @State private var circleColorChanged53 = false
+    @State private var heartColorChanged53 = false
+    @State private var heartSizeChanged53 = false
+    
+    
+
+    @State private var showFavoritesOnly = true
+    
+  
+  
+    @ObservedObject var isBreakFast1Favorited: FavoritedBreakfastStatus1
+    
+    
+    
     
     
     var body: some View {
@@ -37,312 +87,22 @@ struct BreakfastPreview1: View {
         VStack(alignment: .leading, spacing: 0) {
             
 
+        
             
+            RecipePreviewCell97(isBreakFast1Favorited: isBreakFast1Favorited)
+            RecipePreviewCell95(isBreakFast1Favorited: isBreakFast1Favorited)
+            RecipePreviewCell68(isBreakFast1Favorited: isBreakFast1Favorited)
+            RecipePreviewCell63(isBreakFast1Favorited: isBreakFast1Favorited)
+            RecipePreviewCell59(isBreakFast1Favorited: isBreakFast1Favorited)
+            RecipePreviewCell53(isBreakFast1Favorited: isBreakFast1Favorited)
             
-            ZStack {
-
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-               
-
-                
-                
-                HStack {
-                    
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[97].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-                   
-                       
-
-                    
-                    
-                    
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[97].title ?? "Fake Source")")
-                            .bold()
-                        
-                        
-                        Text("Ready In \(KetoJSONDecoded?.results[97].readyInMinutes?.formatNumber()  ?? "") minutes")
-                        
-                        Text("Serving Size: \(KetoJSONDecoded?.results[97].servings?.formatNumber()  ?? "")")
-                        
-                        
-                        
-                    }
-
-                  
-        Spacer()
-            NavigationLink(
-            destination: RecipeDetailView97(),
-            label: {
-                
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-                    
-                })
-                }
+           
             
+           
             
-            }.padding(.bottom)
-
-            
-
-            ZStack {
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-                HStack {
-
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[95].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-                 
-
-
-
-
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[95].title ?? "Fake Source")")
-                            .bold()
-
-
-                        Text("Ready In \(KetoJSONDecoded?.results[95].readyInMinutes?.formatNumber()  ?? "") minutes")
-
-                        Text("Serving Size: \(KetoJSONDecoded?.results[95].servings?.formatNumber()  ?? "")")
-
-
-
-                    }
-
-
-        Spacer()
-            NavigationLink(
-            destination: RecipeDetailView95(),
-            label: {
-
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-
-                })
-                }
-
-
-            }.padding(.bottom)
-
-
-            ZStack {
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-                HStack {
-
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[68].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-                  
-
-
-
-
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[68].title ?? "Fake Source")")
-                            .bold()
-
-
-                        Text("Ready In \(KetoJSONDecoded?.results[68].readyInMinutes?.formatNumber()  ?? "") minutes")
-
-                        Text("Serving Size: \(KetoJSONDecoded?.results[68].servings?.formatNumber()  ?? "")")
-
-
-
-                    }
-
-
-        Spacer()
-            NavigationLink(
-            destination: RecipeDetailView68(),
-            label: {
-
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-
-                })
-                }
-
-
-            }.padding(.bottom)
-            
-            ZStack {
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-                HStack {
-
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[63].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-                  
-
-
-
-
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[63].title ?? "Fake Source")")
-                            .bold()
-
-
-                        Text("Ready In \(KetoJSONDecoded?.results[63].readyInMinutes?.formatNumber()  ?? "") minutes")
-
-                        Text("Serving Size: \(KetoJSONDecoded?.results[63].servings?.formatNumber()  ?? "")")
-
-
-
-                    }
-
-
-        Spacer()
-            NavigationLink(
-            destination: RecipeDetailView63(),
-            label: {
-
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-
-                })
-                }
-
-
-            }.padding(.bottom)
-            
-            ZStack {
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-                HStack {
-
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[59].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-                  
-
-
-
-
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[59].title ?? "Fake Source")")
-                            .bold()
-
-
-                        Text("Ready In \(KetoJSONDecoded?.results[59].readyInMinutes?.formatNumber()  ?? "") minutes")
-
-                        Text("Serving Size: \(KetoJSONDecoded?.results[59].servings?.formatNumber()  ?? "")")
-
-
-
-                    }
-
-
-        Spacer()
-            NavigationLink(
-            destination: RecipeDetailView59(),
-            label: {
-
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-
-                })
-                }
-
-
-            }.padding(.bottom)
-            
-            ZStack {
-                Spacer()
-                    .frame(width: 400, height: 150)
-                    .background(Color.init(#colorLiteral(red: 0.9917978644, green: 0.8497276902, blue: 0.5053946376, alpha: 1)))
-                    .cornerRadius(20)
-
-                HStack {
-
-                    KFImage(URL(string: "\(KetoJSONDecodedDetail[53].image ?? samplePhoto)"))
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 125, height: 100)
-                        .shadow(radius: 10)
-                  
-
-
-
-
-                    VStack(alignment: .leading, spacing: 5){
-                        Text("\(KetoJSONDecoded?.results[53].title ?? "Fake Source")")
-                            .bold()
-
-
-                        Text("Ready In \(KetoJSONDecoded?.results[53].readyInMinutes?.formatNumber()  ?? "") minutes")
-
-                        Text("Serving Size: \(KetoJSONDecoded?.results[53].servings?.formatNumber()  ?? "")")
-
-
-
-                    }
-
-
-        Spacer()
-            NavigationLink(
-            destination: RecipeDetailView53(),
-            label: {
-
-                    Image(systemName: "arrow.forward.circle.fill")
-                        .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
-                        .font(.system(size: 40))
-                        .padding(.horizontal)
-
-                })
-                }
-
-
-            }.padding(.bottom)
-
+          
         }
 
-        
-        
-        
-        
-        
     }
     
     
@@ -351,6 +111,10 @@ struct BreakfastPreview1: View {
 
 struct BreakfastPreview1_Previews: PreviewProvider {
     static var previews: some View {
-        BreakfastPreview1()
+        NavigationView{
+            ScrollView {
+                BreakfastPreview1(isBreakFast1Favorited: FavoritedBreakfastStatus1.init())
+            }
+        }
     }
 }

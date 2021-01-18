@@ -36,7 +36,11 @@ struct LunchView: View {
     let samplePhoto2 = "https://azestybite.com/wp-content/uploads/2015/03/Pistachio-Crusted-Salmon-2.jpg"
     
     
-    
+    @ObservedObject var isFavorited: FavoritedStatus
+    @ObservedObject var isLunch1Favorited: FavoriteLunchStatus1
+    @ObservedObject var isLunch2Favorited: FavoriteLunchStatus2
+    @ObservedObject var isLunch3Favorited: FavoriteLunchStatus3
+    @ObservedObject var isLunch4Favorited: FavoriteLunchStatus4
     var body: some View {
         
      
@@ -58,10 +62,10 @@ struct LunchView: View {
                 }.padding(.top)
                 .padding(.bottom, 20)
                 VStack {
-            LunchPreview1()
-            LunchPreview2()
-            LunchPreview3()
-            LunchPreview4()
+            LunchPreview1(isLunch1Favorited: isLunch1Favorited)
+            LunchPreview2(isLunch2Favorited: isLunch2Favorited)
+            LunchPreview3(isLunch3Favorited: isLunch3Favorited)
+            LunchPreview4(isLunch4Favorited: isLunch4Favorited)
                 }
         
     }.padding()
@@ -73,6 +77,6 @@ struct LunchView: View {
 
 struct LunchView_Previews: PreviewProvider {
     static var previews: some View {
-        LunchView()
+        LunchView(isFavorited: FavoritedStatus.init(), isLunch1Favorited: FavoriteLunchStatus1.init(), isLunch2Favorited: FavoriteLunchStatus2.init(), isLunch3Favorited: FavoriteLunchStatus3.init(), isLunch4Favorited: FavoriteLunchStatus4.init())
     }
 }
