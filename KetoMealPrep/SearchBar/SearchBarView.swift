@@ -281,7 +281,6 @@ struct SearchBarView: View {
                                 RecipePreviewCell83(isLunch1Favorited: isLunch1Favorited)
                                 RecipePreviewCell52(isLunch2Favorited: isLunch2Favorited)
                                 RecipePreviewCell50(isLunch2Favorited: isLunch2Favorited)
-                                RecipePreviewCell51(isLunch2Favorited: isLunch2Favorited)
                                 RecipePreviewCell39(isLunch3Favorited: isLunch3Favorited)
                              
                              
