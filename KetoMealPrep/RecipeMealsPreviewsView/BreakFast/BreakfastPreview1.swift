@@ -76,7 +76,7 @@ struct BreakfastPreview1: View {
   
     @ObservedObject var isBreakFast1Favorited: FavoritedBreakfastStatus1
     
-    
+   
     
     
     
@@ -87,7 +87,7 @@ struct BreakfastPreview1: View {
         VStack(alignment: .leading, spacing: 0) {
             
 
-        
+            
             
             RecipePreviewCell97(isBreakFast1Favorited: isBreakFast1Favorited)
             RecipePreviewCell95(isBreakFast1Favorited: isBreakFast1Favorited)
