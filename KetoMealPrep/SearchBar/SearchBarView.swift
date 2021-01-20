@@ -64,6 +64,7 @@ struct SearchBarView: View {
             .padding(.horizontal)
             .navigationBarHidden(showCancelButton) // .animation(.default) // animation does not work properly
             .padding(.bottom)
+            .padding()
             ScrollView{
                 
                 VStack {
@@ -217,9 +218,7 @@ struct SearchBarView: View {
                                 RecipePreviewCell3(isFavorited: isFavorited)
               
                             }
-                            
-                            
-                            
+        
                             
                         }
                         
@@ -326,6 +325,7 @@ struct SearchBarView_Previews: PreviewProvider {
         SearchBarView(isBreakFast1Favorited: FavoritedBreakfastStatus1.init(), isBreakFast2Favorited: FavoritedBreakfastStatus2.init(), isLunch3Favorited: FavoriteLunchStatus3.init(), isLunch4Favorited: FavoriteLunchStatus4.init(), isLunch2Favorited: FavoriteLunchStatus2.init(), isLunch1Favorited: FavoriteLunchStatus1.init(), isDinner1Favorited: FavoriteDinnerStatus1.init(), isDinner2Favorited: FavoriteDinnerStatus2.init(), isDinner3Favorited: FavoriteDinnerStatus3.init(), isFavorited: FavoritedStatus.init())
 
             .environment(\.colorScheme, .light)
+            .background(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)).ignoresSafeArea())
     }
 }
 
