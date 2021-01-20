@@ -266,6 +266,47 @@ struct SearchBarView: View {
                         }
                         
                     }
+                    
+                    VStack {
+                        
+                        if self.searchText == "Vegetables" || self.searchText == "Veggies" {
+                            
+                            VStack {
+                                
+                                RecipePreviewCell95(isBreakFast1Favorited: isBreakFast1Favorited)
+                                RecipePreviewCell53(isBreakFast1Favorited: isBreakFast1Favorited)
+                                RecipePreviewCell25(isBreakFast2Favorited: isBreakFast2Favorited)
+                                RecipePreviewCell27(isBreakFast2Favorited: isBreakFast2Favorited)
+                                RecipePreviewCell88(isLunch1Favorited: isLunch1Favorited)
+                                RecipePreviewCell83(isLunch1Favorited: isLunch1Favorited)
+                                RecipePreviewCell52(isLunch2Favorited: isLunch2Favorited)
+                                RecipePreviewCell50(isLunch2Favorited: isLunch2Favorited)
+                                RecipePreviewCell51(isLunch2Favorited: isLunch2Favorited)
+                                RecipePreviewCell39(isLunch3Favorited: isLunch3Favorited)
+                             
+                             
+                            
+                                
+                            }
+                            
+                            VStack {
+                                
+                            
+                                RecipePreviewCell15(isLunch4Favorited: isLunch4Favorited)
+                                RecipePreviewCell18(isLunch4Favorited: isLunch4Favorited)
+                                RecipePreviewCell8(isFavorited: isFavorited)
+                                RecipePreviewCell19(isFavorited: isFavorited)
+                                RecipePreviewCell73(isFavorited: isFavorited)
+                             
+                            
+                                
+                            }
+                            
+                            
+                            
+                        }
+                        
+                    }
                 }
                 
                 
