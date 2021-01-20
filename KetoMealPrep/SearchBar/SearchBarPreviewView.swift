@@ -20,11 +20,12 @@ struct SearchBarPreviewView: View {
     }
     
     
-    @State private var showSearch: Bool = false
+    @State var showSearch: Bool = false
+   
     
     var body: some View {
         
-        
+
         
         VStack(alignment: .leading) {
             
@@ -45,13 +46,17 @@ struct SearchBarPreviewView: View {
                 
                 
                 
-                ZStack(alignment: .leading) {
+                ZStack {
                     
                     
                     Spacer()
-                        .frame(width: 100, height: 50)
+                        
+                        .frame(width: 50, height: 50)
                         .background(Color(.secondarySystemBackground))
-                        .cornerRadius(15)
+                        .clipShape(Circle())
+                        
+                      
+                     
                     
                     
                     
@@ -64,7 +69,8 @@ struct SearchBarPreviewView: View {
                     
                     
                     
-                }.opacity(0.8)
+                }
+                .opacity(0.8)
                 
                 
                 
@@ -76,8 +82,9 @@ struct SearchBarPreviewView: View {
 }
 
 
+
 struct SearchBarPreviewView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBarPreviewView()
+        SearchBarPreviewView(showSearch: false)
     }
 }
