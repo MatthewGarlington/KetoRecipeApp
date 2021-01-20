@@ -39,57 +39,74 @@ struct BreakfastView: View {
     @ObservedObject var isFavorited: FavoritedStatus
     @ObservedObject var isBreakFast1Favorited: FavoritedBreakfastStatus1
     @ObservedObject var isBreakFast2Favorited: FavoritedBreakfastStatus2
-    
+
+
     @State private var searchText = ""
     
     
     
     
     var body: some View {
-     
-        // Breakfast Preview View On Homepage
-
-            ScrollView {
+        
+        
+        ScrollView {
+ 
+            
+            // Breakfast Preview View On Homepage
+      
+            
+            
+            VStack(alignment: .leading) {
+                
+                SearchBarPreviewView()
+           
+                  
+                
+      
+                VStack {
+                    
+                    
+              
+                    ZStack {
+                        Spacer()
+                            .frame(width: 400, height: 75)
+                            .background(Blur())
+                            .cornerRadius(20)
+                        
+                        
+                        Text("Breakfast")
+                            .font(.title2)
+                            .bold()
+                        
+                    }
+                }.padding(.top)
+                .padding(.bottom, 20)
                 
                 VStack {
-            
                     
-                   
-                    VStack {
-                        ZStack {
-                            Spacer()
-                                .frame(width: 400, height: 75)
-                                .background(Blur())
-                                .cornerRadius(20)
-                            
-                            
-                            Text("Breakfast")
-                                .font(.title2)
-                                .bold()
-                            
-                        }
-                    }.padding(.top)
-                    .padding(.bottom, 20)
+                 
                     
-                    VStack {
+                    BreakfastPreview1(isBreakFast1Favorited: isBreakFast1Favorited)
                     
-                        
-                        BreakfastPreview1(isBreakFast1Favorited: isBreakFast1Favorited)
-          
-                        BreakfastPreview2(isBreakFast2Favorited: isBreakFast2Favorited)
-                    }
+                    BreakfastPreview2(isBreakFast2Favorited: isBreakFast2Favorited)
+                    
                 }
-    }.padding()
-            .background(Color.init(#colorLiteral(red: 0.5910183787, green: 0.8180559874, blue: 0.7196184993, alpha: 1)))
-            .ignoresSafeArea()
-}
-    
+            }
+        }.padding()
+        .background(Color.init(#colorLiteral(red: 0.5910183787, green: 0.8180559874, blue: 0.7196184993, alpha: 1)))
+        .ignoresSafeArea()
+        
+        
+    }
 }
 
                    
 
 struct BreakfastView_Previews: PreviewProvider {
     static var previews: some View {
+  
+        
         BreakfastView(isFavorited: FavoritedStatus.init(), isBreakFast1Favorited: FavoritedBreakfastStatus1.init(), isBreakFast2Favorited: FavoritedBreakfastStatus2.init())
+        
     }
 }
