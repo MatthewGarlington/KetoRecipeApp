@@ -35,7 +35,7 @@ struct SearchBarView: View {
                     Image(systemName: "magnifyingglass")
                     
                     TextField("Search For Meal By Keyword...", text: $searchText, onEditingChanged: { isEditing in
-                        self.showCancelButton = true
+                        self.showCancelButton = false
                     }, onCommit: {
                         print("onCommit")
                     }).foregroundColor(.primary)
@@ -46,6 +46,7 @@ struct SearchBarView: View {
                         Image(systemName: "xmark.circle.fill").opacity(searchText == "" ? 0 : 1)
                     }
                 }
+                .frame(width: 380, height: 50)
                 .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
                 .foregroundColor(.secondary)
                 .background(Color(.secondarySystemBackground))
@@ -57,12 +58,12 @@ struct SearchBarView: View {
                         self.searchText = ""
                         self.showCancelButton = false
                     }
-                    .foregroundColor(Color(.systemBlue))
+                    .foregroundColor(Color.init(#colorLiteral(red: 1, green: 0.3821339011, blue: 0.3108643591, alpha: 1)))
                 }
             }
             .padding(.horizontal)
             .navigationBarHidden(showCancelButton) // .animation(.default) // animation does not work properly
-            
+            .padding(.bottom)
             ScrollView{
                 
                 VStack {
@@ -217,6 +218,49 @@ struct SearchBarView: View {
               
                             }
                             
+                            
+                            
+                            
+                        }
+                        
+                    }
+                    
+                    VStack {
+                        
+                        if self.searchText == "Lamb" {
+                            
+                            VStack {
+                                
+                                RecipePreviewCell93(isDinner1Favorited: isDinner1Favorited)
+                                RecipePreviewcell84(isDinner1Favorited: isDinner1Favorited)
+                                RecipePreviewCell5(isDinner3Favorited: isDinner3Favorited)
+                                RecipePreviewCell46(isFavorited: isFavorited)
+                             
+                            
+                                
+                            }
+                            
+                            
+                            
+                        }
+                        
+                    }
+                    
+                    VStack {
+                        
+                        if self.searchText == "Mushroom" {
+                            
+                            VStack {
+                                
+                                RecipePreviewCell95(isBreakFast1Favorited: isBreakFast1Favorited)
+                                RecipePreviewCell82(isLunch1Favorited: isLunch1Favorited)
+                                RecipePreviewCell39(isLunch3Favorited: isLunch3Favorited)
+                                RecipePreviewCell6(isLunch3Favorited: isLunch3Favorited)
+                               
+                             
+                            
+                                
+                            }
                             
                             
                             
