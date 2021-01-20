@@ -45,6 +45,17 @@ struct LunchView: View {
         
      
             ScrollView {
+                
+                VStack(alignment: .leading) {
+                    Spacer()
+           // Search View in top corner
+                    
+                    SearchBarPreviewView()
+                        .padding(.top)
+               
+                      
+                
+                
         // Lunch Preview View On Homepage
                 VStack {
                     ZStack {
@@ -68,11 +79,11 @@ struct LunchView: View {
             LunchPreview4(isLunch4Favorited: isLunch4Favorited)
                 }
         
-    }.padding()
+    }
+}.padding()
             .background(Color.init(#colorLiteral(red: 0.5910183787, green: 0.8180559874, blue: 0.7196184993, alpha: 1)))
             .ignoresSafeArea()
-}
-    
+    }
 }
 
 struct LunchView_Previews: PreviewProvider {

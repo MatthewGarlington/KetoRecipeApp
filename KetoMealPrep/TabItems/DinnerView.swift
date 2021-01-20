@@ -43,6 +43,16 @@ struct DinnerView: View {
         
        
             ScrollView {
+                
+                VStack(alignment: .leading) {
+                    Spacer()
+           // Search View in top corner
+                    
+                    SearchBarPreviewView()
+                        .padding(.top)
+               
+                      
+                
         // Dinner Preview View On Homepage
                     
                     VStack {
@@ -69,7 +79,7 @@ struct DinnerView: View {
                 DinnerPreview4(isFavorited: isFavorited)
                    
                     }
-                
+                }
     }.padding()
             .background(Color.init(#colorLiteral(red: 0.5910183787, green: 0.8180559874, blue: 0.7196184993, alpha: 1)))
             .ignoresSafeArea()

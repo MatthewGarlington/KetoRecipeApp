@@ -44,24 +44,29 @@ struct BreakfastView: View {
     @State private var searchText = ""
     
     
-    
+    @State var showSearch: Bool = false
     
     var body: some View {
+        
+
         
         
         ScrollView {
  
             
-            // Breakfast Preview View On Homepage
+        
       
             
             
             VStack(alignment: .leading) {
+                Spacer()
+       // Search View in top corner 
                 
                 SearchBarPreviewView()
+                    .padding(.top)
            
                   
-                
+        // Breakfast Preview View On Homepage
       
                 VStack {
                     
@@ -99,6 +104,8 @@ struct BreakfastView: View {
         
     }
 }
+
+
 
                    
 
