@@ -306,13 +306,93 @@ struct SearchBarView: View {
                         }
                         
                     }
-                }
-                
-                
-                
-                
-                
-                
+                    
+                    VStack {
+                        
+                        if self.searchText == "30 minutes or less" || self.searchText == "30 mins" {
+                    
+                        
+                        VStack {
+                            
+                          RecipePreviewCell63(isBreakFast1Favorited: isBreakFast1Favorited)
+                          RecipePreviewCell25(isBreakFast2Favorited: isBreakFast2Favorited)
+                          RecipePreviewCell27(isBreakFast2Favorited: isBreakFast2Favorited)
+                          RecipePreviewCell90(isLunch1Favorited: isLunch1Favorited)
+                          RecipePreviewCell89(isLunch1Favorited: isLunch1Favorited)
+                          RecipePreviewCell88(isLunch1Favorited: isLunch1Favorited)
+                          RecipePreviewCell85(isLunch1Favorited: isLunch1Favorited)
+                          RecipePreviewCell83(isLunch1Favorited: isLunch1Favorited)
+                          RecipePreviewCell78(isLunch1Favorited: isLunch1Favorited)
+                          RecipePreviewCell88(isLunch1Favorited: isLunch1Favorited)
+                          
+                          
+                            
+                            
+                        }
+                            
+                            VStack {
+                            
+                            RecipePreviewCell85(isLunch1Favorited: isLunch1Favorited)
+                            RecipePreviewCell83(isLunch1Favorited: isLunch1Favorited)
+                            RecipePreviewCell78(isLunch1Favorited: isLunch1Favorited)
+                            RecipePreviewCell56(isLunch2Favorited: isLunch2Favorited)
+                            RecipePreviewCell47(isLunch3Favorited: isLunch3Favorited)
+                            RecipePreviewCell43(isLunch3Favorited: isLunch3Favorited)
+                            RecipePreviewCell39(isLunch3Favorited: isLunch3Favorited)
+                            RecipePreviewCell33(isLunch3Favorited: isLunch3Favorited)
+             
+                            
+                            }
+                            
+                            VStack {
+                            
+                            RecipePreviewCell0(isLunch3Favorited: isLunch3Favorited)
+                            RecipePreviewCell6(isLunch3Favorited: isLunch3Favorited)
+                            RecipePreviewCell5(isDinner3Favorited: isDinner3Favorited)
+                            RecipePreviewCell7(isFavorited: isFavorited)
+                            RecipePreviewCell21(isLunch4Favorited: isLunch4Favorited)
+                            RecipePreviewCell24(isLunch4Favorited: isLunch4Favorited)
+                            RecipePreviewCell29(isLunch4Favorited: isLunch4Favorited)
+                            RecipePreviewCell93(isDinner1Favorited: isDinner1Favorited)
+                            RecipePreviewCell77(isDinner1Favorited: isDinner1Favorited)
+                            }
+                            
+                            VStack {
+                                
+                            RecipePreviewCell60(isDinner2Favorited: isDinner2Favorited)
+                            RecipePreviewCell37(isDinner2Favorited: isDinner2Favorited)
+                            RecipePreviewCell34(isDinner3Favorited: isDinner3Favorited)
+                            RecipePreviewCell4(isDinner3Favorited: isDinner3Favorited)
+                            RecipePreviewCell5(isDinner3Favorited: isDinner3Favorited)
+                            RecipePreviewCell16(isDinner3Favorited: isDinner3Favorited)
+                            RecipePreviewCell7(isFavorited: isFavorited)
+                            RecipePreviewCell14(isFavorited: isFavorited)
+                            RecipePreviewCell98(isFavorited: isFavorited)
+                            RecipePreviewCell80(isFavorited: isFavorited)
+                       
+                                
+                                
+                            }
+                            
+                            VStack {
+                               
+                            RecipePreviewCell73(isFavorited: isFavorited)
+                            RecipePreviewCell80(isFavorited: isFavorited)
+                            RecipePreviewCell66(isFavorited: isFavorited)
+                            RecipePreviewCell64(isFavorited: isFavorited)
+                            RecipePreviewCell49(isFavorited: isFavorited)
+                            RecipePreviewCell3(isFavorited: isFavorited)
+                                
+                                
+                                
+                            }
+                    
+                            
+                        }
+                        
+                        
+                    }
+                }  
                 
             }
             
