@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Favorite: View {
+struct FavoritesView: View {
     
     struct Blur: UIViewRepresentable {
         var style: UIBlurEffect.Style = .systemMaterial
@@ -183,47 +183,47 @@ struct Favorite: View {
         .ignoresSafeArea()
        
 
-//            VStack {
-//                    
-//            FavoritedListItem28(isfavorited: isfavorited)
-//            FavoritedListItem30(isfavorited: isfavorited)
-//                
-//            }
-//            
-//            VStack {
-//                    
-//            FavoritedListItem61(isfavorited: isfavorited)
-//            FavoritedListItem75(isfavorited: isfavorited)
-//            FavoritedListItem46(isfavorited: isfavorited)
-//            FavoritedListItem45(isfavorited: isfavorited)
-//                
-//            }
-//            
-//            VStack {
-//                    
-//            FavoritedListItem98(isfavorited: isfavorited)
-//            FavoritedListItem94(isfavorited: isfavorited)
-//            FavoritedListItem80(isfavorited: isfavorited)
-//            FavoritedListItem73(isfavorited: isfavorited)
-//            FavoritedListItem66(isfavorited: isfavorited)
-//            FavoritedListItem64(isfavorited: isfavorited)
-//            FavoritedListItem62(isfavorited: isfavorited)
-//            FavoritedListItem49(isfavorited: isfavorited)
-//            FavoritedListItem42(isfavorited: isfavorited)
-//            FavoritedListItem3(isfavorited: isfavorited)
-//
-//                }
-//            
-//            VStack {
-//                    
-//            FavoritedListItem7(isfavorited: isfavorited)
-//            FavoritedListItem8(isfavorited: isfavorited)
-//            FavoritedListItem14(isfavorited: isfavorited)
-//            FavoritesListItem19(isfavorited: isfavorited)
-//            FavoritedListItem31(isfavorited: isfavorited)
-//                
-//            }
-//            
+            VStack {
+                    
+            FavoritedListItem28(isfavorited: isfavorited)
+            FavoritedListItem30(isfavorited: isfavorited)
+                
+            }
+            
+            VStack {
+                    
+            FavoritedListItem61(isLunch2Favorited: isLunch2Favorited)
+            FavoritedListItem75(isfavorited: isfavorited)
+            FavoritedListItem46(isfavorited: isfavorited)
+            FavoritedListItem45(isfavorited: isfavorited)
+                
+            }
+            
+            VStack {
+                    
+            FavoritedListItem98(isfavorited: isfavorited)
+            FavoritedListItem94(isfavorited: isfavorited)
+            FavoritedListItem80(isfavorited: isfavorited)
+            FavoritedListItem73(isfavorited: isfavorited)
+            FavoritedListItem66(isfavorited: isfavorited)
+            FavoritedListItem64(isfavorited: isfavorited)
+            FavoritedListItem62(isfavorited: isfavorited)
+            FavoritedListItem49(isfavorited: isfavorited)
+            FavoritedListItem42(isfavorited: isfavorited)
+            FavoritedListItem3(isfavorited: isfavorited)
+
+                }
+            
+            VStack {
+                    
+            FavoritedListItem7(isfavorited: isfavorited)
+            FavoritedListItem8(isfavorited: isfavorited)
+            FavoritedListItem14(isfavorited: isfavorited)
+            FavoritesListItem19(isfavorited: isfavorited)
+            FavoritedListItem31(isfavorited: isfavorited)
+                
+            }
+            
 
 
     }
@@ -232,6 +232,6 @@ struct Favorite: View {
 
 struct Favorite_Previews: PreviewProvider {
     static var previews: some View {
-        Favorite(isfavorited: FavoritedStatus.init(), isBreakFast1Favorited: FavoritedBreakfastStatus1.init(), isBreakFast2Favorited: FavoritedBreakfastStatus2.init(), isLunch1Favorited: FavoriteLunchStatus1.init(), isLunch2Favorited: FavoriteLunchStatus2.init(), isLunch3Favorited: FavoriteLunchStatus3.init(), isLunch4Favorited: FavoriteLunchStatus4.init(), isDinner1Favorited: FavoriteDinnerStatus1.init(), isDinner2Favorited: FavoriteDinnerStatus2.init(), isDinner3Favorited: FavoriteDinnerStatus3.init())
+        FavoritesView(isfavorited: FavoritedStatus.init(), isBreakFast1Favorited: FavoritedBreakfastStatus1.init(), isBreakFast2Favorited: FavoritedBreakfastStatus2.init(), isLunch1Favorited: FavoriteLunchStatus1.init(), isLunch2Favorited: FavoriteLunchStatus2.init(), isLunch3Favorited: FavoriteLunchStatus3.init(), isLunch4Favorited: FavoriteLunchStatus4.init(), isDinner1Favorited: FavoriteDinnerStatus1.init(), isDinner2Favorited: FavoriteDinnerStatus2.init(), isDinner3Favorited: FavoriteDinnerStatus3.init())
     }
 }
