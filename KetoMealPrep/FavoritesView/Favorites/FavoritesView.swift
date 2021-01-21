@@ -48,9 +48,10 @@ struct FavoritesView: View {
                         .font(.title2)
                         .bold()
                     
-                }
+                }.padding()
             }.padding(.top)
             .padding(.bottom, 20)
+            
                     
                 
             
@@ -181,48 +182,52 @@ struct FavoritesView: View {
         }.padding()
         .background(Color.init(#colorLiteral(red: 0.5910183787, green: 0.8180559874, blue: 0.7196184993, alpha: 1)))
         .ignoresSafeArea()
+        
+        
+        // Too Many Items in ScrollView so refactoring is needed Here 
        
-
-            VStack {
-                    
-            FavoritedListItem28(isfavorited: isfavorited)
-            FavoritedListItem30(isfavorited: isfavorited)
-                
-            }
-            
-            VStack {
-                    
-            FavoritedListItem61(isLunch2Favorited: isLunch2Favorited)
-            FavoritedListItem75(isfavorited: isfavorited)
-            FavoritedListItem46(isfavorited: isfavorited)
-            FavoritedListItem45(isfavorited: isfavorited)
-                
-            }
-            
-            VStack {
-                    
-            FavoritedListItem98(isfavorited: isfavorited)
-            FavoritedListItem94(isfavorited: isfavorited)
-            FavoritedListItem80(isfavorited: isfavorited)
-            FavoritedListItem73(isfavorited: isfavorited)
-            FavoritedListItem66(isfavorited: isfavorited)
-            FavoritedListItem64(isfavorited: isfavorited)
-            FavoritedListItem62(isfavorited: isfavorited)
-            FavoritedListItem49(isfavorited: isfavorited)
-            FavoritedListItem42(isfavorited: isfavorited)
-            FavoritedListItem3(isfavorited: isfavorited)
-
-                }
-            
-            VStack {
-                    
-            FavoritedListItem7(isfavorited: isfavorited)
-            FavoritedListItem8(isfavorited: isfavorited)
-            FavoritedListItem14(isfavorited: isfavorited)
-            FavoritesListItem19(isfavorited: isfavorited)
-            FavoritedListItem31(isfavorited: isfavorited)
-                
-            }
+//
+//            VStack {
+//                    
+//            FavoritedListItem28(isfavorited: isfavorited)
+//            FavoritedListItem30(isfavorited: isfavorited)
+//                
+//            }
+//            
+//            VStack {
+//                    
+//            FavoritedListItem61(isLunch2Favorited: isLunch2Favorited)
+//            FavoritedListItem75(isfavorited: isfavorited)
+//            FavoritedListItem46(isfavorited: isfavorited)
+//            FavoritedListItem45(isfavorited: isfavorited)
+//                
+//            }
+//            
+//            VStack {
+//                    
+//            FavoritedListItem98(isfavorited: isfavorited)
+//            FavoritedListItem94(isfavorited: isfavorited)
+//            FavoritedListItem80(isfavorited: isfavorited)
+//            FavoritedListItem73(isfavorited: isfavorited)
+//            FavoritedListItem66(isfavorited: isfavorited)
+//            FavoritedListItem64(isfavorited: isfavorited)
+//            FavoritedListItem62(isfavorited: isfavorited)
+//            FavoritedListItem49(isfavorited: isfavorited)
+//            FavoritedListItem42(isfavorited: isfavorited)
+//            FavoritedListItem3(isfavorited: isfavorited)
+//
+//                }
+//            
+//            VStack {
+//                    
+//            FavoritedListItem7(isfavorited: isfavorited)
+//            FavoritedListItem8(isfavorited: isfavorited)
+//            FavoritedListItem14(isfavorited: isfavorited)
+//            FavoritesListItem19(isfavorited: isfavorited)
+//            FavoritedListItem31(isfavorited: isfavorited)
+//                
+//            }
+      
             
 
 
